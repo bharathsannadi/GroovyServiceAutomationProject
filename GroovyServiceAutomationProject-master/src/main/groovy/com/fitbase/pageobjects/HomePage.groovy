@@ -27,6 +27,4 @@ class HomePage extends Page{
 
 		fitbaseicon.click()
 	}
-
-
 }
