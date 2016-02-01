@@ -33,7 +33,7 @@
 	</repositories>
 
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-io</artifactId>
@@ -47,7 +47,7 @@
 			<version>3.0</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Report NG - Overrides the Test NG reporting -->
 		<dependency>
 			<groupId>org.uncommons</groupId>
@@ -61,7 +61,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- Message Queue Library dependencies -->
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
@@ -74,13 +74,13 @@
 			<version>3.0.4</version>
 		</dependency>
 
-		<!--  External Reporting  -->
+		<!-- External Reporting -->
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>2.05</version>
 		</dependency>
-		
+
 		<!-- Reading Excel -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -92,29 +92,35 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apache-poi-version}</version>
 		</dependency>
-		
-		<!-- Json Buiklder -->
+
+		<!-- JSON Builder -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1</version>
 		</dependency>
-		
-		<!-- groovy Launguage dependency -->
+
+		<!-- Groovy Language dependency -->
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
 			<version>${groovy-version}</version>
 		</dependency>
-		
+
 		<!-- Soft Assertions -->
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-guava</artifactId>
 			<version>${assertj-version}</version>
 		</dependency>
-		
-		
+
+		<!-- Extent Reports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.40.1</version>
+		</dependency>
+
 		<!-- Rest services automation -->
 		<dependency>
 			<groupId>org.codehaus.groovy.modules.http-builder</groupId>
@@ -127,9 +133,9 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		
-		<!-- JS Lib for UI automation -->
+
+
+		<!-- JS Library for UI automation -->
 		<dependency>
 			<groupId>org.gebish</groupId>
 			<artifactId>geb-core</artifactId>
@@ -146,7 +152,7 @@
 			<version>${geb-version}</version>
 		</dependency>
 
-		<!-- Selenium Dependency for Invoking Drivers for Browsers  -->
+		<!-- Selenium Dependency for Invoking Drivers for Browsers -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -159,7 +165,7 @@
 			<artifactId>groovy-wslite</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-		
+
 		<!-- if BDD is required disable testng and use spock framework -->
 		<dependency>
 			<groupId>org.spockframework</groupId>
@@ -172,14 +178,15 @@
 			<version>${spock-reports-version}</version>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- Test harness tool - for test selection and parllel execution and data providers -->
+
+		<!-- Test harness tool - for test selection and parllel execution and data 
+			providers -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8.8</version>
 		</dependency>
-		
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -204,15 +211,15 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>${httpclient-version}</version>
 		</dependency>
-		
-		
+
+
 	</dependencies>
 
 
