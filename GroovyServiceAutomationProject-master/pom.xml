@@ -1,0 +1,330 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ServiceAutomation</groupId>
+	<artifactId>ServiceAutomation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ServiceAutomation</name>
+	<description>ServiceAutomation</description>
+
+	<properties>
+		<apache-poi-version>3.9</apache-poi-version>
+		<gmaven-version>1.5</gmaven-version>
+		<groovy-version>2.3.2</groovy-version>
+		<selenium-version>2.44.0</selenium-version>
+		<mavesurefireplugin-version>2.18.1</mavesurefireplugin-version>
+		<http-builder-version>0.7</http-builder-version>
+		<httpclient-version>4.4.1</httpclient-version>
+		<spock-core-version>0.7-groovy-2.0</spock-core-version>
+		<spock-reports-version>1.1</spock-reports-version>
+		<log4j-version>1.2.17</log4j-version>
+		<jtds-version>1.3.1</jtds-version>
+		<geb-version>0.12.2</geb-version>
+		<selenium-version>2.48.0</selenium-version>
+		<assertj-version>1.3.1</assertj-version>
+	</properties>
+
+
+	<repositories>
+		<repository>
+			<id>java-net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<!-- Google dependency injection -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Report NG - Overrides the Test NG reporting -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.2</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- Message Queue Library dependencies -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+
+		<!--  External Reporting  -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.05</version>
+		</dependency>
+		
+		<!-- Reading Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${apache-poi-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${apache-poi-version}</version>
+		</dependency>
+		
+		<!-- Json Buiklder -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		
+		<!-- groovy Launguage dependency -->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>${groovy-version}</version>
+		</dependency>
+		
+		<!-- Soft Assertions -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-guava</artifactId>
+			<version>${assertj-version}</version>
+		</dependency>
+		
+		
+		<!-- Rest services automation -->
+		<dependency>
+			<groupId>org.codehaus.groovy.modules.http-builder</groupId>
+			<artifactId>http-builder</artifactId>
+			<version>${http-builder-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.codehaus.groovy</groupId>
+					<artifactId>groovy</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		
+		<!-- JS Lib for UI automation -->
+		<dependency>
+			<groupId>org.gebish</groupId>
+			<artifactId>geb-core</artifactId>
+			<version>${geb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gebish</groupId>
+			<artifactId>geb-testng</artifactId>
+			<version>${geb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gebish</groupId>
+			<artifactId>geb-spock</artifactId>
+			<version>${geb-version}</version>
+		</dependency>
+
+		<!-- Selenium Dependency for Invoking Drivers for Browsers  -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium-version}</version>
+		</dependency>
+
+		<!-- Soap Services automation -->
+		<dependency>
+			<groupId>com.github.groovy-wslite</groupId>
+			<artifactId>groovy-wslite</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		
+		<!-- if BDD is required disable testng and use spock framework -->
+		<dependency>
+			<groupId>org.spockframework</groupId>
+			<artifactId>spock-core</artifactId>
+			<version>${spock-core-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.athaydes</groupId>
+			<artifactId>spock-reports</artifactId>
+			<version>${spock-reports-version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Test harness tool - for test selection and parllel execution and data providers -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.8</version>
+		</dependency>
+		
+		<!-- Logging -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpclient-version}</version>
+		</dependency>
+		
+		
+	</dependencies>
+
+
+	<build>
+		<directory>${basedir}/target</directory>
+		<sourceDirectory>${basedir}/src/main/groovy</sourceDirectory>
+		<outputDirectory>${basedir}/target/classes</outputDirectory>
+		<testSourceDirectory>${basedir}/src/test/groovy</testSourceDirectory>
+		<testOutputDirectory>${basedir}/target/classes</testOutputDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.gmaven</groupId>
+				<artifactId>gmaven-plugin</artifactId>
+				<version>${gmaven-version}</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+					<debug>false</debug>
+					<verbose>true</verbose>
+					<stacktrace>true</stacktrace>
+					<defaultScriptExtension>.groovy</defaultScriptExtension>
+					<providerSelection>2.0</providerSelection>
+					<sourceEncoding>UTF-8</sourceEncoding>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</testResource>
+		</testResources>
+
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.gmaven
+										</groupId>
+										<artifactId>
+											gmaven-plugin
+										</artifactId>
+										<versionRange>
+											[1.5,)
+										</versionRange>
+										<goals>
+											<goal>testCompile</goal>
+											<goal>compile</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+				<!-- Plugin to run SPOCK tests -->
+				<plugin>
+					<groupId>org.spockframework</groupId>
+					<artifactId>spock-maven</artifactId>
+					<version>0.7-groovy-2.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>find-specs</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${mavesurefireplugin-version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+</project>
