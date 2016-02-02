@@ -1,4 +1,4 @@
-package com.uiautomation.pageobjects
+package com.ui.automation.pageobjects
 
 import geb.Module
 import geb.Page

@@ -2,8 +2,8 @@ package com.service.servicetests
 
 import groovy.util.logging.Log4j;
 
-import com.projectcommon.util.ConfigUtil
-import com.projectcommon.util.XMLParserUtil
+import com.project.common.util.ConfigUtil
+import com.project.common.util.XMLParserUtil
 import com.service.util.RabbitMQImplementaion
 import com.service.util.RestServiceImplementation
 import com.service.util.SoapServiceUtility;
@@ -20,7 +20,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.Reporter;
 import wslite.soap.SOAPResponse
 import groovy.util.ConfigObject;
-import com.projectcommon.util.CommonUtil
+import com.project.common.util.CommonUtil
 import java.nio.charset.Charset
 
 

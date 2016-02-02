@@ -1,4 +1,4 @@
-package com.projectcommon.util
+package com.project.common.util
 
 import java.math.RoundingMode
 
