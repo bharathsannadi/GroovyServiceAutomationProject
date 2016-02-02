@@ -1,4 +1,4 @@
-package com.test.extendannotations
+package com.test.extend.extentreporter
 
 import java.io.File;
 import java.util.Calendar;
