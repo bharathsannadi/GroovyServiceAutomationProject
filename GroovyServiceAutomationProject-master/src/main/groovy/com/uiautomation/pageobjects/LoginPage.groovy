@@ -1,4 +1,4 @@
-package com.fitbase.pageobjects
+package com.uiautomation.pageobjects
 
 import geb.Module
 import geb.Page

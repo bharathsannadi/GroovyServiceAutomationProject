@@ -2,20 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Service Test suite" allow-return-values="true">
 	<listeners>
-	    <listener class-name="com.test.extendannotations.ExtentReporterNG" />
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
-		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	    <listener class-name="com.test.extendannotations.ExtentReporterNG"/>
 	</listeners>
 	<test verbose="2" name="Service test Cases">
 		<groups>
 			<run>
 				<include name="QueueTests"/>
-				<include name="SOAPService" />
-				<include name="RESTService" />
+				<include name="SOAPService"/>
+				<include name="RESTService"/>
 			</run>
 		</groups>
 		<classes>
-			<class name="com.service.servicetests.ServiceTests" />
+			<class name="com.service.servicetests.ServiceTests"/>
 		</classes>
 	</test> 
-</suite> 
+</suite>

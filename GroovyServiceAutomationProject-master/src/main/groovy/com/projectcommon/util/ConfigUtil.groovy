@@ -1,4 +1,4 @@
-package com.common.util
+package com.projectcommon.util
 
 import groovy.util.ConfigObject
 
